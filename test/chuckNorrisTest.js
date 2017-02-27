@@ -1,5 +1,5 @@
 var assert = require('assert');
-var chuckNorris = require('../chuckNorris');
+var chuckNorris = require('../lib/chuckNorris');
 
 describe('encodedMsg',function(){
 	it("should return message into zero's form",function(){
