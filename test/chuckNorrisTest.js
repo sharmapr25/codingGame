@@ -25,3 +25,23 @@ describe('encodeMsg',function(){
 	});
 });
 
+describe('decodeMsg',function(){
+	var decodeMsg = chuckNorris.decodeMsg;
+	
+	it("should return C for encodedMsg",function(){
+		var message = "0 0 00 0000 0 00";
+		assert.equal('C', decodeMsg(message));
+	});
+
+	it("should return CC for encodedMsg",function(){
+		var message = "0 0 00 0000 0 000 00 0000 0 00";
+		assert.equal('CC',decodeMsg(message));
+	});
+
+	it("should return Chuck for given encodedMsg ",function(){
+		var message ="0 0 00 0000 0 0000 00 0 0 0 00 000 0 000 00 0"
+			+" 0 0 00 0 0 000 00 000 0 0000 00 0 0 0 00 0 0 00";
+		assert.equal('Chuck',decodeMsg(message));
+	});
+});
+
